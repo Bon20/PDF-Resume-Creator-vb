@@ -78,7 +78,7 @@ Partial Class Form1
         Me.btnExit.Location = New System.Drawing.Point(246, 150)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(94, 29)
-        Me.btnExit.TabIndex = 0
+        Me.btnExit.TabIndex = 3
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -87,11 +87,11 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(820, 496)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.tbxAge)
         Me.Controls.Add(Me.tbxFname)
         Me.Controls.Add(Me.lblAge)
         Me.Controls.Add(Me.lblFname)
-        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCreatePDF)
         Me.Name = "Form1"
         Me.Text = "PDF Resume Creator"
