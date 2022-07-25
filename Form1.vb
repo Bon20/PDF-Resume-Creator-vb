@@ -22,4 +22,24 @@ Public Class Form1
             Application.Exit()
         End If
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+    Public Class MyInfo
+        Public Property Fullname As String
+        Public Property HomeAddress As String
+        Public Property ContactNumber As String
+        Public Property EmailAddress As String
+        Public Property Gender As String
+        Public Property Age As String
+        Public Property DateofBirth As String
+        Public Property CivilStatus As String
+        Public Property Skills As String
+        Public Property EducationalAttainment As String
+        Public Property WorkExperience As String
+        Public Property ApplicantSignature As String
+
+    End Class
 End Class
+
