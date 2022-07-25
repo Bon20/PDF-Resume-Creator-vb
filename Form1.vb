@@ -24,7 +24,23 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim Openjsonfile As String = File.ReadAllText("info.json")
+        Dim resultJson As MyInfo = JsonConvert.DeserializeObject(Of MyInfo)(Openjsonfile)
+        'Dim outputpdfFile As Document = New Document()
+        'PdfWriter.GetInstance(outputpdfFile, New FileStream("DE ROBLES JR., BONIFACIO.pdf", FileMode.Create))
+        'outputpdfFile.Open()
+        tbxFname.Text = resultJson.Fullname
+        tbxHomeAdd.Text = resultJson.HomeAddress
+        tbxCnum.Text = resultJson.ContactNumber
+        tbxEmail.Text = resultJson.EmailAddress
+        tbxGender.Text = resultJson.Gender
+        tbxAge.Text = resultJson.Age
+        tbxDOB.Text = resultJson.DateofBirth
+        tbxCivStatus.Text = resultJson.CivilStatus
+        tbxSkills.Text = resultJson.Skills
+        tbxEducAttain.Text = resultJson.EducationalAttainment
+        tbxWExp.Text = resultJson.WorkExperience
+        tbxAppSig.Text = resultJson.ApplicantSignature
     End Sub
     Public Class MyInfo
         Public Property Fullname As String

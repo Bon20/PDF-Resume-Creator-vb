@@ -34,14 +34,14 @@ Partial Class Form1
         Me.lblGender = New System.Windows.Forms.Label()
         Me.tbxEmail = New System.Windows.Forms.TextBox()
         Me.lblAge = New System.Windows.Forms.Label()
-        Me.txbGender = New System.Windows.Forms.TextBox()
+        Me.tbxGender = New System.Windows.Forms.TextBox()
         Me.tbxAge = New System.Windows.Forms.TextBox()
         Me.lblSkills = New System.Windows.Forms.Label()
         Me.tbxSkills = New System.Windows.Forms.TextBox()
         Me.lblWExp = New System.Windows.Forms.Label()
         Me.tbxWExp = New System.Windows.Forms.TextBox()
         Me.lblEducAttain = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbxEducAttain = New System.Windows.Forms.TextBox()
         Me.lblPInfo = New System.Windows.Forms.Label()
         Me.lblDOB = New System.Windows.Forms.Label()
         Me.tbxDOB = New System.Windows.Forms.TextBox()
@@ -161,12 +161,12 @@ Partial Class Form1
         Me.lblAge.TabIndex = 1
         Me.lblAge.Text = "Age:"
         '
-        'txbGender
+        'tbxGender
         '
-        Me.txbGender.Location = New System.Drawing.Point(170, 236)
-        Me.txbGender.Name = "txbGender"
-        Me.txbGender.Size = New System.Drawing.Size(212, 27)
-        Me.txbGender.TabIndex = 2
+        Me.tbxGender.Location = New System.Drawing.Point(170, 236)
+        Me.tbxGender.Name = "tbxGender"
+        Me.tbxGender.Size = New System.Drawing.Size(212, 27)
+        Me.tbxGender.TabIndex = 2
         '
         'tbxAge
         '
@@ -224,13 +224,13 @@ Partial Class Form1
         Me.lblEducAttain.Text = "Educational Attainment:"
         Me.lblEducAttain.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TextBox1
+        'tbxEducAttain
         '
-        Me.TextBox1.Location = New System.Drawing.Point(729, 41)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(255, 138)
-        Me.TextBox1.TabIndex = 2
+        Me.tbxEducAttain.Location = New System.Drawing.Point(729, 41)
+        Me.tbxEducAttain.Multiline = True
+        Me.tbxEducAttain.Name = "tbxEducAttain"
+        Me.tbxEducAttain.Size = New System.Drawing.Size(255, 138)
+        Me.tbxEducAttain.TabIndex = 2
         '
         'lblPInfo
         '
@@ -301,7 +301,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1024, 650)
         Me.Controls.Add(Me.lblPInfo)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbxEducAttain)
         Me.Controls.Add(Me.tbxWExp)
         Me.Controls.Add(Me.tbxSkills)
         Me.Controls.Add(Me.lblEducAttain)
@@ -310,7 +310,7 @@ Partial Class Form1
         Me.Controls.Add(Me.tbxCivStatus)
         Me.Controls.Add(Me.tbxDOB)
         Me.Controls.Add(Me.tbxAppSig)
-        Me.Controls.Add(Me.txbGender)
+        Me.Controls.Add(Me.tbxGender)
         Me.Controls.Add(Me.lblSkills)
         Me.Controls.Add(Me.tbxCnum)
         Me.Controls.Add(Me.lblAge)
@@ -326,7 +326,10 @@ Partial Class Form1
         Me.Controls.Add(Me.lblHomeAdd)
         Me.Controls.Add(Me.lblFname)
         Me.Controls.Add(Me.btnCreatePDF)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PDF Resume Creator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -345,14 +348,14 @@ Partial Class Form1
     Friend WithEvents lblGender As Label
     Friend WithEvents tbxEmail As TextBox
     Friend WithEvents lblAge As Label
-    Friend WithEvents txbGender As TextBox
+    Friend WithEvents tbxGender As TextBox
     Friend WithEvents tbxAge As TextBox
     Friend WithEvents lblSkills As Label
     Friend WithEvents tbxSkills As TextBox
     Friend WithEvents lblWExp As Label
     Friend WithEvents tbxWExp As TextBox
     Friend WithEvents lblEducAttain As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents tbxEducAttain As TextBox
     Friend WithEvents lblPInfo As Label
     Friend WithEvents lblDOB As Label
     Friend WithEvents tbxDOB As TextBox
