@@ -76,6 +76,7 @@ Partial Class Form1
         '
         Me.tbxFname.Location = New System.Drawing.Point(171, 37)
         Me.tbxFname.Name = "tbxFname"
+        Me.tbxFname.ReadOnly = True
         Me.tbxFname.Size = New System.Drawing.Size(212, 27)
         Me.tbxFname.TabIndex = 2
         '
@@ -93,6 +94,7 @@ Partial Class Form1
         '
         Me.tbxHomeAdd.Location = New System.Drawing.Point(171, 70)
         Me.tbxHomeAdd.Name = "tbxHomeAdd"
+        Me.tbxHomeAdd.ReadOnly = True
         Me.tbxHomeAdd.Size = New System.Drawing.Size(212, 27)
         Me.tbxHomeAdd.TabIndex = 2
         '
@@ -121,6 +123,7 @@ Partial Class Form1
         '
         Me.tbxCnum.Location = New System.Drawing.Point(171, 103)
         Me.tbxCnum.Name = "tbxCnum"
+        Me.tbxCnum.ReadOnly = True
         Me.tbxCnum.Size = New System.Drawing.Size(212, 27)
         Me.tbxCnum.TabIndex = 2
         '
@@ -148,6 +151,7 @@ Partial Class Form1
         '
         Me.tbxEmail.Location = New System.Drawing.Point(171, 137)
         Me.tbxEmail.Name = "tbxEmail"
+        Me.tbxEmail.ReadOnly = True
         Me.tbxEmail.Size = New System.Drawing.Size(212, 27)
         Me.tbxEmail.TabIndex = 2
         '
@@ -165,6 +169,7 @@ Partial Class Form1
         '
         Me.tbxGender.Location = New System.Drawing.Point(170, 236)
         Me.tbxGender.Name = "tbxGender"
+        Me.tbxGender.ReadOnly = True
         Me.tbxGender.Size = New System.Drawing.Size(212, 27)
         Me.tbxGender.TabIndex = 2
         '
@@ -172,6 +177,7 @@ Partial Class Form1
         '
         Me.tbxAge.Location = New System.Drawing.Point(170, 269)
         Me.tbxAge.Name = "tbxAge"
+        Me.tbxAge.ReadOnly = True
         Me.tbxAge.Size = New System.Drawing.Size(212, 27)
         Me.tbxAge.TabIndex = 2
         '
@@ -191,6 +197,7 @@ Partial Class Form1
         Me.tbxSkills.Location = New System.Drawing.Point(170, 384)
         Me.tbxSkills.Multiline = True
         Me.tbxSkills.Name = "tbxSkills"
+        Me.tbxSkills.ReadOnly = True
         Me.tbxSkills.Size = New System.Drawing.Size(213, 138)
         Me.tbxSkills.TabIndex = 2
         '
@@ -210,6 +217,7 @@ Partial Class Form1
         Me.tbxWExp.Location = New System.Drawing.Point(729, 189)
         Me.tbxWExp.Multiline = True
         Me.tbxWExp.Name = "tbxWExp"
+        Me.tbxWExp.ReadOnly = True
         Me.tbxWExp.Size = New System.Drawing.Size(255, 138)
         Me.tbxWExp.TabIndex = 2
         '
@@ -229,6 +237,7 @@ Partial Class Form1
         Me.tbxEducAttain.Location = New System.Drawing.Point(729, 41)
         Me.tbxEducAttain.Multiline = True
         Me.tbxEducAttain.Name = "tbxEducAttain"
+        Me.tbxEducAttain.ReadOnly = True
         Me.tbxEducAttain.Size = New System.Drawing.Size(255, 138)
         Me.tbxEducAttain.TabIndex = 2
         '
@@ -256,6 +265,7 @@ Partial Class Form1
         '
         Me.tbxDOB.Location = New System.Drawing.Point(170, 302)
         Me.tbxDOB.Name = "tbxDOB"
+        Me.tbxDOB.ReadOnly = True
         Me.tbxDOB.Size = New System.Drawing.Size(212, 27)
         Me.tbxDOB.TabIndex = 2
         '
@@ -273,6 +283,7 @@ Partial Class Form1
         '
         Me.tbxCivStatus.Location = New System.Drawing.Point(170, 335)
         Me.tbxCivStatus.Name = "tbxCivStatus"
+        Me.tbxCivStatus.ReadOnly = True
         Me.tbxCivStatus.Size = New System.Drawing.Size(212, 27)
         Me.tbxCivStatus.TabIndex = 2
         '
@@ -290,6 +301,7 @@ Partial Class Form1
         '
         Me.tbxAppSig.Location = New System.Drawing.Point(729, 370)
         Me.tbxAppSig.Name = "tbxAppSig"
+        Me.tbxAppSig.ReadOnly = True
         Me.tbxAppSig.Size = New System.Drawing.Size(255, 27)
         Me.tbxAppSig.TabIndex = 2
         '

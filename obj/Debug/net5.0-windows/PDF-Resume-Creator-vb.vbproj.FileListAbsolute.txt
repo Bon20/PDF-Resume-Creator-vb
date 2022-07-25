@@ -18,4 +18,4 @@ C:\Users\bmder\source\repos\PDF-Resume-Creator-vb\PDF-Resume-Creator-vb\obj\Debu
 C:\Users\bmder\source\repos\PDF-Resume-Creator-vb\PDF-Resume-Creator-vb\obj\Debug\net5.0-windows\ref\PDF-Resume-Creator-vb.dll
 C:\Users\bmder\source\repos\PDF-Resume-Creator-vb\PDF-Resume-Creator-vb\obj\Debug\net5.0-windows\PDF-Resume-Creator-vb.pdb
 C:\Users\bmder\source\repos\PDF-Resume-Creator-vb\PDF-Resume-Creator-vb\obj\Debug\net5.0-windows\PDF-Resume-Creator-vb.genruntimeconfig.cache
-C:\Users\bmder\source\repos\PDF-Resume-Creator-vb\PDF-Resume-Creator-vb\obj\Debug\net5.0-windows\PDF-Resume-Creator-vb.vbproj.AssemblyReference.cache
+C:\Users\bmder\source\repos\PDF-Resume-Creator-vb\PDF-Resume-Creator-vb\obj\Debug\net5.0-windows\PDF-Resume-Creator-vb.vbproj.CopyComplete
