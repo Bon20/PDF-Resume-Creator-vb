@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
-Imports iTextSharp.text.pdf.draw
 Imports Newtonsoft.Json
 Public Class Form1
     Dim Openjsonfile As String = File.ReadAllText("info.json")
@@ -75,6 +74,16 @@ Public Class Form1
         Dim WExp As Paragraph = New Paragraph(resultJson.WorkExperience)
         WExp.Font.Size = 12
         outputpdfFile.Add(WExp)
+
+        Dim AppSig As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(resultJson.ApplicantSignature)
+        AppSig.ScalePercent(50.0F)
+        AppSig.Alignment = iTextSharp.text.Image.ALIGN_RIGHT Or iTextSharp.text.Image.UNDERLYING
+        AppSig.IndentationRight = 20
+        outputpdfFile.Add(AppSig)
+
+        Dim SigFname As Paragraph = New Paragraph(vbLf & vbLf & resultJson.Fullname)
+        SigFname.Alignment = Element.ALIGN_RIGHT
+        outputpdfFile.Add(SigFname)
 
 
         outputpdfFile.Close()
