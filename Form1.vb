@@ -9,7 +9,7 @@ Public Class Form1
 
         PDFcreate.Open()
         PDFcreate.Add(New Paragraph(tbxFname.Text))
-        PDFcreate.Add(New Paragraph(tbxAge.Text))
+        PDFcreate.Add(New Paragraph(tbxHomeAdd.Text))
         PDFcreate.Close()
         MessageBox.Show("Resume Created!")
     End Sub
