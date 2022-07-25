@@ -6,7 +6,7 @@
 "Gender": "Male",
 "Age": "24",
 "DateofBirth": "March 27, 1998",
-"Civil Status": "Single",
+"CivilStatus": "Single",
 "Skills": "Programming",
 "EducationalAttainment": "Bachelor of Science in Computer Engineering",
 "WorkExperience": "None",

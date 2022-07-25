@@ -1,16 +1,21 @@
 ﻿Imports System.IO
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
+Imports iTextSharp.text.pdf.draw
 Imports Newtonsoft.Json
 Public Class Form1
+    Dim Openjsonfile As String = File.ReadAllText("info.json")
+    Dim resultJson As MyInfo = JsonConvert.DeserializeObject(Of MyInfo)(Openjsonfile)
     Private Sub btnCreatePDF_Click(sender As Object, e As EventArgs) Handles btnCreatePDF.Click
-        Dim PDFcreate As Document = New Document()
-        Dim Create As PdfWriter = PdfWriter.GetInstance(PDFcreate, New FileStream("DE ROBLES JR., BONIFACIO.pdf", FileMode.Create))
+        Dim outputpdfFile As Document = New Document()
+        PdfWriter.GetInstance(outputpdfFile, New FileStream("DE ROBLES JR., BONIFACIO.pdf", FileMode.Create))
+        outputpdfFile.Open()
+        Dim Fname As Paragraph = New Paragraph(resultJson.Fullname)
+        Fname.Font.Size = 20
+        Fname.Alignment = Element.ALIGN_CENTER
+        outputpdfFile.Add(Fname)
+        outputpdfFile.Close()
 
-        PDFcreate.Open()
-        PDFcreate.Add(New Paragraph(tbxFname.Text))
-        PDFcreate.Add(New Paragraph(tbxHomeAdd.Text))
-        PDFcreate.Close()
         MessageBox.Show("Resume Created!")
     End Sub
 
@@ -24,11 +29,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim Openjsonfile As String = File.ReadAllText("info.json")
-        Dim resultJson As MyInfo = JsonConvert.DeserializeObject(Of MyInfo)(Openjsonfile)
-        'Dim outputpdfFile As Document = New Document()
-        'PdfWriter.GetInstance(outputpdfFile, New FileStream("DE ROBLES JR., BONIFACIO.pdf", FileMode.Create))
-        'outputpdfFile.Open()
+
         tbxFname.Text = resultJson.Fullname
         tbxHomeAdd.Text = resultJson.HomeAddress
         tbxCnum.Text = resultJson.ContactNumber
