@@ -10,10 +10,73 @@ Public Class Form1
         Dim outputpdfFile As Document = New Document()
         PdfWriter.GetInstance(outputpdfFile, New FileStream("DE ROBLES JR., BONIFACIO.pdf", FileMode.Create))
         outputpdfFile.Open()
+
+
         Dim Fname As Paragraph = New Paragraph(resultJson.Fullname)
         Fname.Font.Size = 20
         Fname.Alignment = Element.ALIGN_CENTER
         outputpdfFile.Add(Fname)
+
+        Dim HomeAdd As Paragraph = New Paragraph(resultJson.HomeAddress)
+        HomeAdd.Font.Size = 12
+        HomeAdd.Alignment = Element.ALIGN_CENTER
+        outputpdfFile.Add(HomeAdd)
+
+        Dim Cnum As Paragraph = New Paragraph(resultJson.ContactNumber)
+        Cnum.Font.Size = 12
+        Cnum.Alignment = Element.ALIGN_CENTER
+        outputpdfFile.Add(Cnum)
+
+        Dim Email As Paragraph = New Paragraph(resultJson.EmailAddress & vbLf & vbLf)
+        Email.Font.Size = 12
+        Email.Alignment = Element.ALIGN_CENTER
+        outputpdfFile.Add(Email)
+
+        Dim PersonInfo As Paragraph = New Paragraph("Personal Information")
+        PersonInfo.Font.Size = 18
+        outputpdfFile.Add(PersonInfo)
+
+        Dim Gender As Paragraph = New Paragraph(vbLf & resultJson.Gender)
+        Gender.Font.Size = 12
+        outputpdfFile.Add(Gender)
+
+        Dim Age As Paragraph = New Paragraph(resultJson.Age)
+        Age.Font.Size = 12
+        outputpdfFile.Add(Age)
+
+        Dim DOB As Paragraph = New Paragraph(resultJson.DateofBirth)
+        DOB.Font.Size = 12
+        outputpdfFile.Add(DOB)
+
+        Dim CivStatus As Paragraph = New Paragraph(resultJson.CivilStatus & vbLf & vbLf)
+        CivStatus.Font.Size = 12
+        outputpdfFile.Add(CivStatus)
+
+        Dim Myskills As Paragraph = New Paragraph("Skills" & vbLf & vbLf)
+        Myskills.Font.Size = 18
+        outputpdfFile.Add(Myskills)
+
+        Dim Skills As Paragraph = New Paragraph(resultJson.Skills & vbLf & vbLf)
+        Skills.Font.Size = 12
+        outputpdfFile.Add(Skills)
+
+        Dim MyEducAttain As Paragraph = New Paragraph("Educational Attainment" & vbLf & vbLf)
+        MyEducAttain.Font.Size = 18
+        outputpdfFile.Add(MyEducAttain)
+
+        Dim EducAttain As Paragraph = New Paragraph(resultJson.EducationalAttainment & vbLf & vbLf)
+        EducAttain.Font.Size = 12
+        outputpdfFile.Add(EducAttain)
+
+        Dim MyWExp As Paragraph = New Paragraph("Work Experience" & vbLf & vbLf)
+        MyWExp.Font.Size = 18
+        outputpdfFile.Add(MyWExp)
+
+        Dim WExp As Paragraph = New Paragraph(resultJson.WorkExperience)
+        WExp.Font.Size = 12
+        outputpdfFile.Add(WExp)
+
+
         outputpdfFile.Close()
 
         MessageBox.Show("Resume Created!")
@@ -42,6 +105,7 @@ Public Class Form1
         tbxEducAttain.Text = resultJson.EducationalAttainment
         tbxWExp.Text = resultJson.WorkExperience
         tbxAppSig.Text = resultJson.ApplicantSignature
+
     End Sub
     Public Class MyInfo
         Public Property Fullname As String
